@@ -100,7 +100,7 @@ public class Functions_GUI implements functions {
 
         try (FileReader reader = new FileReader(file);
              BufferedReader br = new BufferedReader(reader)) {
-        	ComplexFunction f = new ComplexFunction(new Monom("4"));
+        	ComplexFunction f = new ComplexFunction(new Monom("x^2"));
             // read line by line
             String line;
             while ((line = br.readLine()) != null) {
@@ -154,7 +154,7 @@ public class Functions_GUI implements functions {
 		double y1=0;
 		int gColor =0;
 		for(int i=0;i<this.size();i++) { //limit gColor
-			if(gColor==7)
+			if(gColor==6)
 				gColor=0;
 			StdDraw.setPenColor(Colors[gColor++]);
 			for(double x = rx.get_min();x<=rx.get_max();x=x+epsilon) {
